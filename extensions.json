@@ -1,22 +1,22 @@
 {
   "recommendations": [
-    "dracula-theme.theme-dracula",
-    "ritwickdey.LiveServer",
+    "contractor-nesamani.theme-dark-gt-dracula",
+    "ritwickdey.liveserver",
     "oderwat.indent-rainbow",
     "formulahendry.auto-rename-tag",
     "formulahendry.auto-close-tag",
-    "CoenraadS.bracket-pair-colors",
+    "dlw-bracket-pair-colorizer",
     "vincaslt.highlight-matching-tag",
-    "bradgashler.htmltagwrap",
-    "Zignd.html-css-class-completion",
+    "bgashler.htmltagwrap",
+    "zignd.html-css-class-completion",
     "pranaygp.vscode-css-peek",
     "ecmel.vscode-html-css",
-    "usernamehw.errorlens",
-    "PKief.material-icon-theme",
-    "Tyriar.lorem-ipsum",
-    "naumovs.color-highlight",
-    "kisstkondoros.vscode-gutter-preview",
+    "usernamehw.error-lens",
+    "pkief.material-icon-theme",
+    "bmewburn.vscode-intelephense-client",
+    "sergiireshetnyk.vscode-ext-color-highlight",
+    "tomasa.image-preview",
     "yzhang.markdown-all-in-one",
-    "compulim.vscode-save-actions"
+    "ms-dotnettools.save-typing"
   ]
 }
