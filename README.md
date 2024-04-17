@@ -8,7 +8,7 @@ To install these extensions, you can either:
 
 1. **Manual Installation**: Search for each extension in the Visual Studio Code Extensions Marketplace and install them individually.
 
-2. **Automatic Installation**: Open Visual Studio Code by pressing `Ctrl+`` to open the integrated terminal, then run the below commands.
+2. **Automatic Installation**: Open Visual Studio Code and press `Ctrl+`` to open the integrated terminal, then run the below commands.
     ```bash
     # Download the extensions.json file from the GitHub repository
     curl -LJO https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/extensions.json
