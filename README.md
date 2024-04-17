@@ -1,4 +1,4 @@
-# VSCode Extensions
+# VSCode Extensions 📂
 
 This repository contains a list of recommended Visual Studio Code extensions curated for enhancing your coding experience. These extensions cover various aspects of development such as syntax highlighting, code formatting, productivity tools, and more.
 
