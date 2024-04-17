@@ -1,31 +1,38 @@
 {
   "recommendations": [
+    // Programming Language Support
+    "Python.Microsoft",
+    "Pylance.Microsoft",
+    "Python Debugger.Microsoft",
+    // HTML and CSS
     "Auto Close Tag.Jun Han",
     "Auto Rename Tag.Jun Han",
-    "autopep8.Microsoft",
-    "Bracket Pair Color DLW.Bracket Pair Color DLW",
     "Class autocomplete for HTML.AES Soft",
-    "Code Runner.Jun Han",
-    "Color Highlight.Sergii N",
-    "CSS Peek.Pranay Prakash",
-    "Dark GT Theme.Contractor_Nesamani",
-    "Error Lens.Alexander",
-    "flask-snippets.cstrap",
-    "Highlight Matching Tag.vincaslt",
-    "HTML Class Suggestions.Anders Ellenshøj Andersen",
     "HTML CSS Support.ecmel",
-    "htmltagwrap.Brad Gashler",
-    "Image preview.Kiss Tamás",
-    "indent-rainbow.oderwat",
+    "HTML Class Suggestions.Anders Ellenshøj Andersen",
     "IntelliSense for CSS class names in HTML.Zignd",
-    "Live Server.Ritwick Dey",
-    "Lorem ipsum.Daniel Imms",
-    "Markdown All in One.Yu Zhang",
-    "Material Icon Theme.Philipp Kief",
-    "Pylance.Microsoft",
-    "Python.Microsoft",
-    "Python Debugger.Microsoft",
+    "CSS Peek.Pranay Prakash",
+    // Code Formatting and Quality
+    "autopep8.Microsoft",
+    "Error Lens.Alexander",
+    // Code Editing Features
+    "Bracket Pair Color DLW.Bracket Pair Color DLW",
+    "Highlight Matching Tag.vincaslt",
+    "indent-rainbow.oderwat",
     "Save Typing.Michel Betancourt",
-    "Text Pastry.jkjustjoshing"
+    "Text Pastry.jkjustjoshing",
+    // Visual Enhancements
+    "Color Highlight.Sergii N",
+    "Dark GT Theme.Contractor_Nesamani",
+    "Material Icon Theme.Philipp Kief",
+    "Image preview.Kiss Tamás",
+    // Development Workflow
+    "Code Runner.Jun Han",
+    "flask-snippets.cstrap",
+    "Live Server.Ritwick Dey",
+    // Markdown Support
+    "Markdown All in One.Yu Zhang",
+    // Lorem Ipsum Generator
+    "Lorem ipsum.Daniel Imms"
   ]
 }
