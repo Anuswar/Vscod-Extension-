@@ -1,67 +1,66 @@
 # VSCode Extensions 📂
 
-This repository contains a list of recommended Visual Studio Code extensions curated for enhancing your coding experience. These extensions cover various aspects of development such as syntax highlighting, code formatting, productivity tools, and more.
+This repository contains a script to install Visual Studio Code extensions listed in the `extensions.txt` file. The script checks for already installed extensions and installs only the missing ones, improving performance and efficiency.
 
 ## ⚙️ Installation
 
-To install these extensions, you can either:
-
-1. **Manual Installation**: Search for each extension in the Visual Studio Code Extensions Marketplace and install them individually.
-
-2. **Automatic Installation**: Open Visual Studio Code and press `Ctrl+`` to open the integrated terminal, then run the below commands.
-    ```bash
-    # Download the extensions.json file from the GitHub repository
-    curl -LJO https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/extensions.json
-
-    # Install the extensions from the extensions.json file
-    code --install-extension $(jq -r '.recommendations[]' extensions.json)
+1. Clone this repository to your local machine:
+    ```sh
+    git clone https://github.com/Anuswar/Vscod-Extension.git
+    cd Vscod-Extension
     ```
 
-## 🛠️ Included Extensions
+2. Make the `setup.sh` script executable:
+    ```sh
+    chmod +x setup.sh
+    ```
 
-The following is the list of extensions included in this repository:
+3. Add your desired extensions to the `extensions.txt` file in the format `publisher.extensionName` (one per line):
+    ```txt
+    formulahendry.auto-close-tag
+    formulahendry.auto-rename-tag
+    ms-python.autopep8
+    CoenraadS.bracket-pair-colorizer-2
+    sandipchitale.breadcrumbsview
+    formulahendry.code-runner
+    pranaygp.vscode-css-peek
+    mechatroner.rainbow-csv
+    nesamani.dark-gt-theme
+    usernamehw.errorlens
+    vincaslt.vscode-highlight-matching-tag
+    Zignd.html-css-class-completion
+    ecmel.vscode-html-css
+    kisstkondoros.vscode-gutter-preview
+    oderwat.indent-rainbow
+    Zignd.html-css-class-completion
+    zainchen.json
+    moshfeu.vscode-javascript-booster
+    panoply.vscode-json-template
+    ritwickdey.liveserver
+    dsznajder.es7-react-js-snippets
+    yzhang.markdown-all-in-one
+    pkief.material-icon-theme
+    esbenp.prettier-vscode
+    ms-python.vscode-pylance
+    ms-python.python
+    ms-python.debugpy
+    mechatroner.rainbow-csv
+    moshfeu.vscode-typescript-booster
+    mechatroner.vscode-rainbow-csv
+    rido.sitemap
+    tomoki1207.pdf
+    redhat.vscode-xml
+    ```
 
-- **Programming Language Support**:
-  - Python - Microsoft
-  - Pylance - Microsoft
-  - Python Debugger - Microsoft
+4. Run the `setup.sh` script from the terminal in the repository directory:
+    ```sh
+    ./setup.sh
+    ```
 
-- **HTML and CSS**:
-  - Auto Close Tag - Jun Han
-  - Auto Rename Tag - Jun Han
-  - Class autocomplete for HTML - AES Soft
-  - HTML CSS Support - ecmel
-  - HTML Class Suggestions - Anders Ellenshøj Andersen
-  - IntelliSense for CSS class names in HTML - Zignd
-  - CSS Peek - Pranay Prakash
-
-- **Code Formatting and Quality**:
-  - autopep8 - Microsoft
-  - Error Lens - Alexander
-
-- **Code Editing Features**:
-  - Bracket Pair Color DLW - Bracket Pair Color DLW
-  - Highlight Matching Tag - vincaslt
-  - indent-rainbow - oderwat
-  - Save Typing - Michel Betancourt
-  - Text Pastry - jkjustjoshing
-
-- **Visual Enhancements**:
-  - Color Highlight - Sergii N
-  - Dark GT Theme - Contractor_Nesamani
-  - Material Icon Theme - Philipp Kief
-  - Image preview - Kiss Tamás
-
-- **Development Workflow**:
-  - Code Runner - Jun Han
-  - flask-snippets - cstrap
-  - Live Server - Ritwick Dey
-
-- **Markdown Support**:
-  - Markdown All in One - Yu Zhang
-
-- **Lorem Ipsum Generator**:
-  - Lorem ipsum - Daniel Imms
+## 📜 The script will:
+- Check if each extension listed in `extensions.txt` is already installed.
+- Install any missing extensions using the `code --install-extension` command.
+- Provide feedback on the installation progress.
 
 ## 🤝 Contributing
 
