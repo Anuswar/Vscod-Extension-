@@ -14,14 +14,18 @@ is_extension_installed() {
     echo "$installed_extensions" | grep -q "$1"
 }
 
-# Loop through each line in the extensions.txt file and install the extension if not installed
+# Read extensions from the file and filter out the ones that are already installed
+extensions_to_install=()
 while IFS= read -r extension || [ -n "$extension" ]; do
     if is_extension_installed "$extension"; then
         echo "Extension $extension is already installed."
     else
-        echo "Installing $extension..."
-        code --install-extension "$extension"
+        extensions_to_install+=("$extension")
     fi
 done < extensions.txt
+
+# Install extensions in parallel using xargs
+echo "Installing ${#extensions_to_install[@]} extensions..."
+echo "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} || echo "Failed to install {}"'
 
 echo "All extensions processed."
