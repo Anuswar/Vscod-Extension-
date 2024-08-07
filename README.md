@@ -57,10 +57,33 @@ This repository contains a script to install Visual Studio Code extensions liste
     ./setup.sh
     ```
 
-## 📜 The script will:
-- Check if each extension listed in `extensions.txt` is already installed.
-- Install any missing extensions using the `code --install-extension` command.
-- Provide feedback on the installation progress.
+## 🗑️ Deleting the Repository
+
+If you need to delete the cloned repository, follow the steps below for your respective environment:
+
+### Windows (PowerShell)
+
+1. Navigate to the parent directory of the cloned repository:
+    ```powershell
+    cd ..
+    ```
+
+2. Remove the repository directory:
+    ```powershell
+    Remove-Item -Recurse -Force Vscod-Extension
+    ```
+
+### Linux and macOS
+
+1. Navigate to the parent directory of the cloned repository:
+    ```sh
+    cd ..
+    ```
+
+2. Remove the repository directory:
+    ```sh
+    rm -rf Vscod-Extension
+    ```
 
 ## 🤝 Contributing
 
