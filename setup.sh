@@ -1,23 +1,4 @@
-#!/bin/sh
-
-# Function to check if an extension is installed
-is_extension_installed() {
-    code --list-extensions | grep -q "$1"
-}
-
-# Function to show a progress bar
-show_progress() {
-    local progress=$1
-    local total=$2
-    local bar_length=40
-    local filled_length=$((bar_length * progress / total))
-    local empty_length=$((bar_length - filled_length))
-
-    printf "\r["
-    printf "%${filled_length}s" | tr ' ' '#'
-    printf "%${empty_length}s" | tr ' ' '-'
-    printf "] %d/%d" "$progress" "$total"
-}
+#!/bin/bash
 
 # Check if the extensions.txt file exists
 if [ ! -f extensions.txt ]; then
@@ -25,33 +6,26 @@ if [ ! -f extensions.txt ]; then
     exit 1
 fi
 
-# Read the extensions.txt file and store extensions in an array
-mapfile -t extensions < extensions.txt
-total_extensions=${#extensions[@]}
+# Get the list of installed extensions
+installed_extensions=$(code --list-extensions)
 
-echo "Starting installation of $total_extensions extensions..."
+# Function to check if an extension is installed
+is_extension_installed() {
+    echo "$installed_extensions" | grep -q "$1"
+}
 
-installed_count=0
-
-# Loop through each extension and install if not already installed
-for extension in "${extensions[@]}"; do
-    echo -e "\nProcessing $extension..."
+# Read extensions from the file and filter out the ones that are already installed
+extensions_to_install=()
+while IFS= read -r extension || [ -n "$extension" ]; do
     if is_extension_installed "$extension"; then
         echo "Extension $extension is already installed."
     else
-        echo "Installing $extension..."
-        if code --install-extension "$extension"; then
-            echo "Extension $extension installed successfully."
-        else
-            echo "Failed to install extension $extension or it cannot be found."
-        fi
+        extensions_to_install+=("$extension")
     fi
-    installed_count=$((installed_count + 1))
-    show_progress "$installed_count" "$total_extensions"
-done
+done < extensions.txt
 
-echo -e "\nAll extensions processed."
+# Install extensions in parallel using xargs
+echo "Installing ${#extensions_to_install[@]} extensions..."
+echo "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} || echo "Failed to install {}"'
 
-# Wait for user input to close the window
-echo "Press any key to close..."
-read -n 1 -s
+echo "All extensions processed."
