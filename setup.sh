@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Function to check if an extension is installed
 is_extension_installed() {
@@ -16,7 +16,7 @@ show_progress() {
     printf "\r["
     printf "%${filled_length}s" | tr ' ' '#'
     printf "%${empty_length}s" | tr ' ' '-'
-    printf "] %d/%d" "$progress" "$total"
+    printf "] %d/%d\n" "$progress" "$total"
 }
 
 # Check if the extensions.txt file exists
@@ -54,3 +54,7 @@ cd ..
 rm -rf Vscod-Extension
 
 echo "Repository deleted."
+
+# Wait for user input to close the window
+echo "Press any key to close..."
+read -n 1 -s
