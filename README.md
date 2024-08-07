@@ -23,7 +23,6 @@ This repository contains a script to install Visual Studio Code extensions liste
    BracketPairColorDLW.bracket-pair-color-dlw
    sandipchitale.vscode-breadcrumbs-alt
    formulahendry.code-runner
-   streetsidesoftware.code-spell-checker
    pranaygp.vscode-css-peek
    phplasma.csv-to-table
    ContractorNesamani.dark-gt-theme
