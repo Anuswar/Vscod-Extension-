@@ -51,6 +51,7 @@ This repository contains a script to install Visual Studio Code extensions liste
    akhail.save-typing
    NilsSoderman.sitemap-generator
    DotJoshJohnson.xml
+   oderwat.indent-rainbow
     ```
 
 4. Run the `setup.sh` script from the terminal in the repository directory (Windows):
