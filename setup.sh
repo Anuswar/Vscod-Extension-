@@ -25,7 +25,10 @@ while IFS= read -r extension || [ -n "$extension" ]; do
 done < extensions.txt
 
 # Install extensions in parallel using xargs
-echo "Installing ${#extensions_to_install[@]} extensions..."
-echo "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} || echo "Failed to install {}"'
+if [ ${#extensions_to_install[@]} -gt 0 ]; then
+    printf "%s\n" "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} || echo "Failed to install {}"'
+else
+    echo "All extensions are already installed."
+fi
 
 echo "All extensions processed."
