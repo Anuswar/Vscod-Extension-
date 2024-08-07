@@ -16,7 +16,7 @@ show_progress() {
     printf "\r["
     printf "%${filled_length}s" | tr ' ' '#'
     printf "%${empty_length}s" | tr ' ' '-'
-    printf "] %d/%d\n" "$progress" "$total"
+    printf "] %d/%d" "$progress" "$total"
 }
 
 # Check if the extensions.txt file exists
@@ -28,11 +28,14 @@ fi
 # Read the extensions.txt file and store extensions in an array
 mapfile -t extensions < extensions.txt
 total_extensions=${#extensions[@]}
+
+echo "Starting installation of $total_extensions extensions..."
+
 installed_count=0
 
 # Loop through each extension and install if not already installed
 for extension in "${extensions[@]}"; do
-    echo "Processing $extension..."
+    echo -e "\nProcessing $extension..."
     if is_extension_installed "$extension"; then
         echo "Extension $extension is already installed."
     else
@@ -40,7 +43,7 @@ for extension in "${extensions[@]}"; do
         if code --install-extension "$extension"; then
             echo "Extension $extension installed successfully."
         else
-            echo "Failed to install extension $extension."
+            echo "Failed to install extension $extension or it cannot be found."
         fi
     fi
     installed_count=$((installed_count + 1))
@@ -48,12 +51,6 @@ for extension in "${extensions[@]}"; do
 done
 
 echo -e "\nAll extensions processed."
-
-# Clean up by deleting the cloned repository
-cd ..
-rm -rf Vscod-Extension
-
-echo "Repository deleted."
 
 # Wait for user input to close the window
 echo "Press any key to close..."
