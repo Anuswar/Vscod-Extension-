@@ -10,7 +10,7 @@ This repository contains a script to install Visual Studio Code extensions liste
     cd Vscod-Extension
     ```
 
-2. Make the `setup.sh` script executable:
+2. Make the `setup.sh` script executable (Linux & macOS): 
     ```sh
     chmod +x setup.sh
     ```
@@ -53,7 +53,7 @@ This repository contains a script to install Visual Studio Code extensions liste
    DotJoshJohnson.xml
     ```
 
-4. Run the `setup.sh` script from the terminal in the repository directory:
+4. Run the `setup.sh` script from the terminal in the repository directory (Windows):
     ```sh
     ./setup.sh
     ```
