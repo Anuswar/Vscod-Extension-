@@ -4,7 +4,6 @@ ms-python.autopep8
 BracketPairColorDLW.bracket-pair-color-dlw
 sandipchitale.vscode-breadcrumbs-alt
 formulahendry.code-runner
-streetsidesoftware.code-spell-checker
 pranaygp.vscode-css-peek
 phplasma.csv-to-table
 ContractorNesamani.dark-gt-theme
