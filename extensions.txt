@@ -32,3 +32,4 @@ mechatroner.rainbow-csv
 akhail.save-typing
 NilsSoderman.sitemap-generator
 DotJoshJohnson.xml
+oderwat.indent-rainbow
