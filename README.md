@@ -17,39 +17,40 @@ This repository contains a script to install Visual Studio Code extensions liste
 
 3. Add your desired extensions to the `extensions.txt` file in the format `publisher.extensionName` (one per line):
     ```txt
-    formulahendry.auto-close-tag
-    formulahendry.auto-rename-tag
-    ms-python.autopep8
-    CoenraadS.bracket-pair-colorizer-2
-    sandipchitale.breadcrumbsview
-    formulahendry.code-runner
-    pranaygp.vscode-css-peek
-    mechatroner.rainbow-csv
-    nesamani.dark-gt-theme
-    usernamehw.errorlens
-    vincaslt.vscode-highlight-matching-tag
-    Zignd.html-css-class-completion
-    ecmel.vscode-html-css
-    kisstkondoros.vscode-gutter-preview
-    oderwat.indent-rainbow
-    Zignd.html-css-class-completion
-    zainchen.json
-    moshfeu.vscode-javascript-booster
-    panoply.vscode-json-template
-    ritwickdey.liveserver
-    dsznajder.es7-react-js-snippets
-    yzhang.markdown-all-in-one
-    pkief.material-icon-theme
-    esbenp.prettier-vscode
-    ms-python.vscode-pylance
-    ms-python.python
-    ms-python.debugpy
-    mechatroner.rainbow-csv
-    moshfeu.vscode-typescript-booster
-    mechatroner.vscode-rainbow-csv
-    rido.sitemap
-    tomoki1207.pdf
-    redhat.vscode-xml
+   formulahendry.auto-close-tag
+   formulahendry.auto-rename-tag
+   ms-python.autopep8
+   BracketPairColorDLW.bracket-pair-color-dlw
+   sandipchitale.vscode-breadcrumbs-alt
+   formulahendry.code-runner
+   streetsidesoftware.code-spell-checker
+   pranaygp.vscode-css-peek
+   phplasma.csv-to-table
+   ContractorNesamani.dark-gt-theme
+   usernamehw.errorlens
+   vincaslt.highlight-matching-tag
+   AndersEAndersen.html-class-suggestions
+   ecmel.vscode-html-css
+   hwencc.html-tag-wrapper
+   kisstkondoros.vscode-gutter-preview
+   Zignd.html-css-class-completion
+   xabikos.JavaScriptSnippets
+   ZainChen.json
+   Meezilla.json
+   sissel.json-script-tag
+   ritwickdey.LiveServer
+   Tyriar.lorem-ipsum
+   yzhang.markdown-all-in-one
+   PKief.material-icon-theme
+   mathematic.vscode-pdf
+   esbenp.prettier-vscode
+   ms-python.vscode-pylance
+   ms-python.python
+   ms-python.debugpy
+   mechatroner.rainbow-csv
+   akhail.save-typing
+   NilsSoderman.sitemap-generator
+   DotJoshJohnson.xml
     ```
 
 4. Run the `setup.sh` script from the terminal in the repository directory:
