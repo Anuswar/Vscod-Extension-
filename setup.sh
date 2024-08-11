@@ -24,11 +24,24 @@ while IFS= read -r extension || [ -n "$extension" ]; do
     fi
 done < extensions.txt
 
-# Install extensions in parallel using xargs
+# Install extensions in parallel using xargs with --force flag
 if [ ${#extensions_to_install[@]} -gt 0 ]; then
-    printf "%s\n" "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} || echo "Failed to install {}"'
+    printf "%s\n" "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} --force || echo "Failed to install {}"'
 else
     echo "All extensions are already installed."
 fi
 
-echo "All extensions processed."
+# Set Dark GT Dracula theme and Material Icon Theme in settings.json
+echo "Setting Dark GT Dracula theme and Material Icon Theme..."
+
+SETTINGS_PATH="$HOME/.config/Code/User/settings.json"
+
+# Add the new settings
+cat <<EOL >> "$SETTINGS_PATH"
+{
+    "workbench.colorTheme": "Dark GT Dracula",
+    "workbench.iconTheme": "material-icon-theme"
+}
+EOL
+
+echo "All extensions processed and themes set."
