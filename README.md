@@ -73,8 +73,6 @@ The repository utilizes the following technologies and tools:
   - **PowerShell**: A shell used in Windows for scripting and task automation, including managing and removing directories.
 - **Git**: A version control system for tracking changes in the repository and cloning it to local machines.
 - **Extensions API**: Utilizes VS Code’s command-line interface to install, update, and manage extensions.
-
-This explanation clarifies the role of "shell" and includes relevant details about the technology stack.
       
 ## 🤝 Contributing
 
