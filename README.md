@@ -1,4 +1,4 @@
-![To Do List Extensions Preview](https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/preview.jpg)
+![Vscode Extension Preview](https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/preview.jpg)
 
 # VSCode Extensions 📂
 
