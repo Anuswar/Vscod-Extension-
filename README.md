@@ -2,7 +2,7 @@
 
 # VSCode Extensions 📂
 
-This repository contains a script to install Visual Studio Code extensions listed in the `extensions.txt` file. The script checks for already installed extensions and installs only the missing ones, improving performance and efficiency.
+This repository provides a simple and efficient way to install Visual Studio Code extensions that i use. With a single script, you can quickly set up your coding environment across different operating systems, ensuring all necessary extensions are installed and up-to-date.
 
 ### ✨ Key Features of the Setup Script:
 - Ensures `extensions.txt` exists before proceeding.
@@ -57,7 +57,7 @@ The repository includes the following files:
 ```
 Vscod-Extension/
 ├── setup.sh          # The script to install the VS Code extensions
-├── preview.png       # An optional preview image (e.g., of the installed extensions)
+├── preview.png       # An optional preview image 
 ├── extensions.txt    # A list of extensions to be installed
 ├── README.md         # This README file
 ├── LICENSE.md        # The license for the repository
