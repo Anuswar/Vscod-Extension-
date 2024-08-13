@@ -62,6 +62,19 @@ Vscod-Extension/
 ├── README.md         # This README file
 ├── LICENSE.md        # The license for the repository
 ```
+
+## 🛠️ Tech Stack
+
+The repository utilizes the following technologies and tools:
+
+- **Visual Studio Code (VS Code)**: A popular code editor used for development. The script installs various extensions to enhance the VS Code experience.
+- **Shell**: A command-line interface used to run the `setup.sh` script. This includes:
+  - **Bash**: The shell used in Unix-like operating systems such as Linux and macOS. Bash scripts are used for automating tasks like installing extensions.
+  - **PowerShell**: A shell used in Windows for scripting and task automation, including managing and removing directories.
+- **Git**: A version control system for tracking changes in the repository and cloning it to local machines.
+- **Extensions API**: Utilizes VS Code’s command-line interface to install, update, and manage extensions.
+
+This explanation clarifies the role of "shell" and includes relevant details about the technology stack.
       
 ## 🤝 Contributing
 
