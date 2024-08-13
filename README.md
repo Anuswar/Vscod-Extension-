@@ -1,4 +1,4 @@
-![Vscode Extension Preview](https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/preview.jpg)
+![Vscode Extension Preview](https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/preview.png)
 
 # VSCode Extensions 📂
 
