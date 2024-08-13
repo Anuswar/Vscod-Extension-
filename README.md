@@ -1,3 +1,5 @@
+![To Do List Extensions Preview](https://raw.githubusercontent.com/Anuswar/Vscod-Extension/main/preview.jpg)
+
 # VSCode Extensions 📂
 
 This repository contains a script to install Visual Studio Code extensions listed in the `extensions.txt` file. The script checks for already installed extensions and installs only the missing ones, improving performance and efficiency.
