@@ -50,6 +50,19 @@ If you need to delete the cloned repository, follow these steps:
       rm -rf Vscod-Extension
       ```
       
+## 📂 File Structure
+
+The repository includes the following files:
+
+```
+Vscod-Extension/
+├── setup.sh          # The script to install the VS Code extensions
+├── preview.png       # An optional preview image (e.g., of the installed extensions)
+├── extensions.txt    # A list of extensions to be installed
+├── README.md         # This README file
+├── LICENSE.md        # The license for the repository
+```
+      
 ## 🤝 Contributing
 
 Contributions are welcome! If you find any issues, have suggestions, or want to add new features, please open an issue or create a pull request. Follow these steps:
