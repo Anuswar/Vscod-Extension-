@@ -18,30 +18,18 @@ is_extension_installed() {
 extensions_to_install=()
 while IFS= read -r extension || [ -n "$extension" ]; do
     if is_extension_installed "$extension"; then
-        echo "Extension $extension is already installed."
+        echo "Extension $extension is already installed, but will be updated if needed."
+        extensions_to_install+=("$extension")
     else
         extensions_to_install+=("$extension")
     fi
 done < extensions.txt
 
-# Install extensions in parallel using xargs with --force flag
+# Install extensions in parallel using xargs with the --force flag
 if [ ${#extensions_to_install[@]} -gt 0 ]; then
-    printf "%s\n" "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing {}..."; code --install-extension {} --force || echo "Failed to install {}"'
+    printf "%s\n" "${extensions_to_install[@]}" | xargs -n 1 -P 4 -I {} sh -c 'echo "Installing or updating {}..."; code --install-extension {} --force || echo "Failed to install {}"'
 else
-    echo "All extensions are already installed."
+    echo "All extensions are already installed and up-to-date."
 fi
 
-# Set Dark GT Dracula theme and Material Icon Theme in settings.json
-echo "Setting Dark GT Dracula theme and Material Icon Theme..."
-
-SETTINGS_PATH="$HOME/.config/Code/User/settings.json"
-
-# Add the new settings
-cat <<EOL >> "$SETTINGS_PATH"
-{
-    "workbench.colorTheme": "Dark GT Dracula",
-    "workbench.iconTheme": "material-icon-theme"
-}
-EOL
-
-echo "All extensions processed and themes set."
+echo "All extensions processed."
